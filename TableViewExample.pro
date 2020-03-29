@@ -25,13 +25,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    delegate.cpp \
         main.cpp \
         mainwindow.cpp \
-    propmodel.cpp
+    propmodel.cpp \
+    spinboxdelegate.cpp
 
 HEADERS += \
+    delegate.h \
         mainwindow.h \
-    propmodel.h
+    propmodel.h \
+    spinboxdelegate.h
 
 FORMS += \
         mainwindow.ui

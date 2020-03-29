@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "propmodel.h"
 #include <QDebug>
+#include "spinboxdelegate.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -12,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tableView->setModel(myModel);
     ui->tableView->show();
     ui->tableView->update();
+    SpinBoxDelegate *delegate = new SpinBoxDelegate(this);
+
+    ui->tableView->setItemDelegateForColumn(1,delegate);
 
 }
 
